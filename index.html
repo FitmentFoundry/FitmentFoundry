@@ -1,4 +1,4 @@
-..<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,136 +6,114 @@
   <title>Fitment Foundry</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
       color: #222;
-      line-height: 1.6;
+      display: flex;
+      flex-direction: row;
     }
+
+    .side-image {
+      width: 120px;
+      flex-shrink: 0;
+      object-fit: cover;
+      height: 100vh;
+    }
+
     .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px;
-      background: white;
-      position: relative;
+      flex: 1;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
     }
-    header {
+
+    .logo {
       text-align: center;
-      padding: 30px 10px 20px;
-      position: relative;
+      margin-bottom: 20px;
     }
-    header img {
-      max-width: 180px;
-      height: auto;
+
+    .logo img {
+      width: 200px;
+      max-width: 100%;
     }
+
     h1 {
+      text-align: center;
       font-size: 28px;
-      margin-top: 10px;
+      margin-top: 0;
     }
+
     h2 {
+      font-size: 20px;
       margin-top: 40px;
-      color: #444;
+      border-bottom: 2px solid #000;
+      padding-bottom: 5px;
     }
+
     ul {
       padding-left: 20px;
     }
-    .section {
-      margin-top: 30px;
-    }
-    .side-bar {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 80px;
-      background: url('https://www.transparenttextures.com/patterns/white-wall.png');
-      opacity: 0.05;
-    }
-    .left-bar {
-      left: -80px;
-    }
-    .right-bar {
-      right: -80px;
-    }
-    footer {
-      text-align: center;
+
+    .footer {
       margin-top: 40px;
       font-size: 14px;
-      color: #888;
+      color: #666;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      .side-image {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="side-bar left-bar"></div>
-  <div class="side-bar right-bar"></div>
+  <img class="side-image" src="visual-left.png" alt="Visual Left" />
   <div class="container">
-    <header>
-      <img src="https://fitmentfoundry.github.io/FitmentFoundry/logo.png" alt="Fitment Foundry Logo" />
-      <h1>Fitment Foundry</h1>
-      <p><em>Because Fitment Shouldn’t Be a Guessing Game</em></p>
-    </header>
-
-    <div class="section">
-      <h2>🧾 About Us</h2>
-      <p>Fitment Foundry is a specialized remote team based in the Philippines offering precise, reliable, and scalable support for automotive e-commerce platforms. With deep experience in catalog management, vehicle compatibility data, and e-commerce optimization, we help teams maintain high data integrity without the overhead of a traditional agency.</p>
+    <div class="logo">
+      <img src="logo.png" alt="Fitment Foundry Logo" />
     </div>
+    <h1>Because Fitment Shouldn’t Be a Guessing Game</h1>
 
-    <div class="section">
-      <h2>⚙️ Services We Offer</h2>
-      <ul>
-        <li><strong>General Maintenance of Vehicle Compatibility & Product Data</strong>
-          <ul>
-            <li>Update fitment tables and map outdated vehicle entries</li>
-            <li>Standardize product attributes and titles</li>
-            <li>Generate B2B labels, part descriptions, and eliminate duplicates</li>
-          </ul>
-        </li>
-        <li><strong>Business Opportunity Identification</strong>
-          <ul>
-            <li>VIO-based gap analysis and kit-building recommendations</li>
-          </ul>
-        </li>
-        <li><strong>Data Analysis & Insights</strong>
-          <ul>
-            <li>Competitor listing and catalog comparisons</li>
-            <li>Sales performance and returns investigation</li>
-          </ul>
-        </li>
-        <li><strong>Add-On Services</strong> (via our trusted network)
-          <ul>
-            <li>Amazon keyword strategy and market research</li>
-            <li>Keyword tracking, reporting, and competitive analysis</li>
-          </ul>
-        </li>
-      </ul>
+    <h2>🧾 About Us</h2>
+    <p>Fitment Foundry is a specialized remote team based in the Philippines offering precise, reliable, and scalable support for automotive e-commerce platforms. With deep experience in catalog management, vehicle compatibility data, and e-commerce optimization, we help teams maintain high data integrity without the overhead of a traditional agency.</p>
+
+    <h2>⚙️ Services We Offer</h2>
+    <ul>
+      <li><strong>Data Maintenance:</strong> Vehicle fitment updates, attribute standardization, mapping old entries to current databases.</li>
+      <li><strong>Content Optimization:</strong> Optimized product titles, duplicate detection, B2B labels, and category mapping for marketplaces.</li>
+      <li><strong>Business Insights:</strong> Gap analysis, kit-building opportunities, competitor tracking, performance insights.</li>
+      <li><strong>Add-On Services:</strong> Amazon keyword strategy, SEO audits, market research, and reporting through our extended network.</li>
+    </ul>
+
+    <h2>🚀 Why Work With Us</h2>
+    <ul>
+      <li>Hands-on with ACES, PIES, TecDoc, and major marketplaces.</li>
+      <li>Efficient remote operations with structured workflows.</li>
+      <li>Affordable, collaborative, and accuracy-focused PH-based team.</li>
+    </ul>
+
+    <h2>🔧 Tools & Platforms</h2>
+    <ul>
+      <li><strong>Catalog/Data:</strong> ACES, PIES, TecDoc, Excel, Google Sheets</li>
+      <li><strong>eCommerce:</strong> Amazon, eBay, Walmart, Shopify</li>
+      <li><strong>Workflow:</strong> Slack, Trello, Google Workspace</li>
+    </ul>
+
+    <h2>📣 Let’s Work Together</h2>
+    <p><strong>Contact:</strong> Fitment Foundry Team at <a href="mailto:fitmentfoundry@gmail.com">fitmentfoundry@gmail.com</a></p>
+    <p><strong>Website:</strong> You're already here 😉</p>
+
+    <div class="footer">
+      Fitment Foundry | Because Fitment Shouldn’t Be a Guessing Game
     </div>
-
-    <div class="section">
-      <h2>🚀 Why Work With Us</h2>
-      <ul>
-        <li>Experienced in ACES, PIES, TecDoc, eCommerce marketplaces</li>
-        <li>Efficient, scalable PH-based team trained in catalog accuracy</li>
-        <li>Affordable, consistent, and easy to collaborate with</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>🔧 Tools & Platforms</h2>
-      <p><strong>Catalog/Data:</strong> ACES, PIES, TecDoc, Excel, Google Sheets<br/>
-         <strong>eCommerce:</strong> Amazon, eBay, Walmart, Shopify<br/>
-         <strong>Workflow:</strong> Slack, Trello, Google Workspace</p>
-    </div>
-
-    <div class="section">
-      <h2>📣 Let’s Work Together</h2>
-      <p><strong>Fitment Foundry HQ</strong><br/>
-      📩 <a href="mailto:fitmentfoundry@gmail.com">fitmentfoundry@gmail.com</a><br/>
-      🌐 Website: You're already here!</p>
-    </div>
-
-    <footer>
-      <p>© Fitment Foundry • Because Fitment Shouldn’t Be a Guessing Game</p>
-    </footer>
   </div>
+  <img class="side-image" src="visual-right.png" alt="Visual Right" />
 </body>
 </html>
