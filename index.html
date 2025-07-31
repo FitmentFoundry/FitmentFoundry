@@ -2,118 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fitment Foundry</title>
   <style>
     body {
+      font-family: sans-serif;
+      line-height: 1.6;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
-      color: #222;
-      display: flex;
-      flex-direction: row;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
     }
-
-    .side-image {
-      width: 120px;
-      flex-shrink: 0;
-      object-fit: cover;
-      height: 100vh;
+    .header {
+      text-align: center;
+      background-color: #000;
+      padding: 20px 0;
     }
-
-    .container {
-      flex: 1;
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-    }
-
     .logo {
-      text-align: center;
-      margin-bottom: 20px;
+      max-width: 240px;
     }
-
-    .logo img {
-      width: 200px;
-      max-width: 100%;
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.05);
     }
-
-    h1 {
-      text-align: center;
-      font-size: 28px;
-      margin-top: 0;
+    h1, h2, h3 {
+      color: #FF6600;
     }
-
-    h2 {
-      font-size: 20px;
-      margin-top: 40px;
-      border-bottom: 2px solid #000;
-      padding-bottom: 5px;
+    hr {
+      border: none;
+      border-top: 2px solid #ddd;
+      margin: 20px 0;
     }
-
     ul {
       padding-left: 20px;
     }
-
-    .footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #666;
-      text-align: center;
+    .section {
+      margin-bottom: 40px;
     }
-
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
-      .side-image {
-        display: none;
-      }
+    .contact {
+      margin-bottom: 40px;
+      font-size: 1.1em;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      padding: 20px 0;
     }
   </style>
 </head>
 <body>
-  <img class="side-image" src="visual-left.png" alt="Visual Left" />
+  <div class="header">
+    <img src="fitmentfoundry-logo.png" alt="Fitment Foundry Logo" class="logo" />
+  </div>
+
   <div class="container">
-    <div class="logo">
-      <img src="logo.png" alt="Fitment Foundry Logo" />
+    <h1 style="text-align:center;">Fitment Foundry</h1>
+    <p style="text-align:center; font-style:italic;">Because Fitment Shouldn’t Be a Guessing Game</p>
+
+    <hr />
+
+    <div class="section">
+      <h2>🧾 About Us</h2>
+      <p>Fitment Foundry is a specialized remote team based in the Philippines offering precise, reliable, and scalable support for automotive e-commerce platforms. With deep experience in catalog management, vehicle compatibility data, and e-commerce optimization, we help teams maintain high data integrity without the overhead of a traditional agency.</p>
     </div>
-    <h1>Because Fitment Shouldn’t Be a Guessing Game</h1>
 
-    <h2>🧾 About Us</h2>
-    <p>Fitment Foundry is a specialized remote team based in the Philippines offering precise, reliable, and scalable support for automotive e-commerce platforms. With deep experience in catalog management, vehicle compatibility data, and e-commerce optimization, we help teams maintain high data integrity without the overhead of a traditional agency.</p>
+    <div class="section">
+      <h2>⚙️ Services We Offer</h2>
+      <h3>General Maintenance of Vehicle Compatibility & Product Data</h3>
+      <ul>
+        <li>Update vehicle fitment tables based on changes in the compatibility database</li>
+        <li>Standardize product attributes and vehicle qualifier values</li>
+        <li>Map outdated vehicle entries to current standard database values</li>
+        <li>Create optimized product titles for eCommerce platforms and marketplaces</li>
+        <li>Standardize and generate B2B product labels and part descriptions</li>
+        <li>Identify duplicate listings across private label product lines</li>
+        <li>Map categories to part names for eBay and Amazon</li>
+        <li>Align eBay and Amazon item specifics with structured product attributes</li>
+      </ul>
 
-    <h2>⚙️ Services We Offer</h2>
-    <ul>
-      <li><strong>Data Maintenance:</strong> Vehicle fitment updates, attribute standardization, mapping old entries to current databases.</li>
-      <li><strong>Content Optimization:</strong> Optimized product titles, duplicate detection, B2B labels, and category mapping for marketplaces.</li>
-      <li><strong>Business Insights:</strong> Gap analysis, kit-building opportunities, competitor tracking, performance insights.</li>
-      <li><strong>Add-On Services:</strong> Amazon keyword strategy, SEO audits, market research, and reporting through our extended network.</li>
-    </ul>
+      <h3>Business Opportunity Identification</h3>
+      <ul>
+        <li>Conduct VIO-based gap analysis to uncover product or fitment opportunities</li>
+        <li>Identify kit-building possibilities across multiple product categories</li>
+      </ul>
 
-    <h2>🚀 Why Work With Us</h2>
-    <ul>
-      <li>Hands-on with ACES, PIES, TecDoc, and major marketplaces.</li>
-      <li>Efficient remote operations with structured workflows.</li>
-      <li>Affordable, collaborative, and accuracy-focused PH-based team.</li>
-    </ul>
+      <h3>Data Analysis & Insights</h3>
+      <ul>
+        <li>Compare competitor listings and catalog structures</li>
+        <li>Analyze listing performance across sales channels</li>
+        <li>Investigate return rates and identify non-performing SKUs</li>
+      </ul>
 
-    <h2>🔧 Tools & Platforms</h2>
-    <ul>
-      <li><strong>Catalog/Data:</strong> ACES, PIES, TecDoc, Excel, Google Sheets</li>
-      <li><strong>eCommerce:</strong> Amazon, eBay, Walmart, Shopify</li>
-      <li><strong>Workflow:</strong> Slack, Trello, Google Workspace</li>
-    </ul>
+      <h3>Add-On Services (via our trusted network)</h3>
+      <ul>
+        <li>Conduct market research and trend analysis for Amazon keyword strategies</li>
+        <li>Develop and implement targeted keyword plans for improved product discoverability</li>
+        <li>Monitor keyword performance using analytics tools and adjust strategies accordingly</li>
+        <li>Generate keyword performance reports with actionable recommendations</li>
+        <li>Track competitor keyword strategies and adapt for competitive advantage</li>
+      </ul>
+    </div>
 
-    <h2>📣 Let’s Work Together</h2>
-    <p><strong>Contact:</strong> Fitment Foundry Team at <a href="mailto:fitmentfoundry@gmail.com">fitmentfoundry@gmail.com</a></p>
-    <p><strong>Website:</strong> You're already here 😉</p>
+    <div class="section">
+      <h2>🚀 Why Work With Us</h2>
+      <ul>
+        <li>Hands-on experience with ACES, PIES, TecDoc, and eCommerce marketplaces</li>
+        <li>Scalable and efficient remote operations</li>
+        <li>PH-based team trained in catalog accuracy and structured workflows</li>
+        <li>Affordable, reliable, and easy to collaborate with</li>
+      </ul>
+    </div>
 
-    <div class="footer">
-      Fitment Foundry | Because Fitment Shouldn’t Be a Guessing Game
+    <div class="section">
+      <h2>🔧 Tools & Platforms</h2>
+      <p><strong>Catalog/Data:</strong> ACES, PIES, TecDoc, Excel, Google Sheets</p>
+      <p><strong>eCommerce:</strong> Amazon, eBay, Walmart, Shopify</p>
+      <p><strong>Workflow:</strong> Slack, Trello, Google Workspace</p>
+    </div>
+
+    <div class="section contact">
+      <h2>📣 Let’s Work Together</h2>
+      <p><strong>Contact:</strong> Fitment Foundry Team – <a href="mailto:fitmentfoundry@gmail.com">fitmentfoundry@gmail.com</a></p>
+      <p><strong>Website:</strong> <em>You’re already here 😉</em></p>
     </div>
   </div>
-  <img class="side-image" src="visual-right.png" alt="Visual Right" />
+
+  <div class="footer">
+    Fitment Foundry | Because Fitment Shouldn’t Be a Guessing Game
+  </div>
 </body>
 </html>
