@@ -5,8 +5,11 @@
 *{box-sizing:border-box}
 body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:#fff;color:#222}
 .site-header{display:flex;align-items:center;justify-content:center;padding:18px 12px;background:#fff;border-bottom:1px solid #eee}
-.logo{height:64px;display:block}
-
+.logo{
+    height: auto;
+    width: 250px;
+    display: block;
+}
 /* HERO */
 .hero{
   height:56vh;
@@ -53,3 +56,4 @@ body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:#fff;color
   .hero-inner h1{font-size:28px}
   .onepager{padding:18px}
 }
+
