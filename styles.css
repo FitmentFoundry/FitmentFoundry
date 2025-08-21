@@ -1,131 +1,80 @@
-:root{
-  --brand: #e53923;           /* match your red logo */
-  --ink: #1b1b1b;
-  --muted: #5a5a5a;
-  --paper: #fff7f5;           /* warm light background */
-  --panel: #ffffff;
-  --overlay: rgba(0,0,0,.35); /* readability overlay */
+:root {
+  --brand: #e53923;
+  --overlay: rgba(0,0,0,.35);
   --overlay-hover: rgba(0,0,0,.22);
-  --wrap: 1100px;
 }
-
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  color: var(--ink);
-  background: var(--paper);
-  line-height: 1.65;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
-
-/* generic layout */
-.wrap{
-  width: min(100% - 2rem, var(--wrap));
-  margin-inline: auto;
+.wrap {
+  width: min(90%, 1100px);
+  margin: auto;
 }
-
-/* LOGO + TAGLINE */
-.hero{
-  position: relative;
-  padding: 2.75rem 0 1rem;
-  background: var(--paper);
-  border-bottom: 1px solid #e9e3e1;
+.logo {
+  width: clamp(200px, 25vw, 400px);
+  display: block;
+  margin: 0 auto 1rem;
+}
+.tagline {
   text-align: center;
+  color: #555;
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
-.logo{
-  width: clamp(180px, 22vw, 360px);
-  height: auto;
-  display: inline-block;
-}
-.tagline{
-  margin: .75rem 0 0;
-  color: var(--muted);
-  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
-}
-
-/* PANELS WITH BACKGROUND SVG + OVERLAY */
-.panel{
+.panel {
   position: relative;
-  isolation: isolate;
-  padding: clamp(2rem, 4vw, 3.5rem) 0;
-  background: var(--panel);
-  overflow: hidden;
+  padding: clamp(2rem, 5vw, 4rem) 0;
+  color: #fff;
 }
-
-/* background image (set via class) */
-.panel::after{
-  content:"";
-  position:absolute; inset:0;
-  background-repeat: no-repeat;
-  background-position: right -80px center;
-  background-size: min(900px, 80vw) auto;
-  opacity: .7;              /* let the car be visible behind text */
-  z-index:-2;
-}
-
-/* dark overlay for readability */
-.panel::before{
-  content:"";
-  position:absolute; inset:0;
+.panel::before {
+  content: "";
+  position: absolute; inset: 0;
   background: var(--overlay);
-  z-index:-1;
-  transition: background .35s ease;
+  transition: background .3s ease;
 }
-
-/* desktop hover lighten */
-@media (hover:hover){
-  .panel:hover::before{ background: var(--overlay-hover); }
+.panel:hover::before {
+  background: var(--overlay-hover);
 }
-
-/* swap the car backgrounds by section */
-.bg-cd5::after{ background-image: url("assets/cd5.svg"); }
-.bg-ls400::after{ background-image: url("assets/ls400.svg"); }
-.bg-j30::after{ background-image: url("assets/j30.svg"); }
-
-/* headings */
-h2{
+.panel::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: .6;
+  z-index: -1;
+}
+.bg-cd5::after { background-image: url("assets/cd5.webp"); }
+.bg-ls400::after { background-image: url("assets/ls400.webp"); }
+.bg-j30::after { background-image: url("assets/j30.webp"); }
+.wrap h2 {
   color: var(--brand);
-  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
-  margin: 0 0 .75rem;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
 }
-h3{
-  color: var(--ink);
-  font-size: clamp(1.1rem, 1.8vw, 1.25rem);
-  margin: 1.25rem 0 .4rem;
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: white;
 }
-
-/* text */
-p{ margin: 0 0 1rem; }
-ul{ margin: .25rem 0 1rem 1.2rem; padding:0; }
-li{ margin: .35rem 0; }
-
-/* CONTACT */
-.contact{
-  padding: 2.25rem 0 2.75rem;
+ul, p {
+  color: white;
+  margin-bottom: 1rem;
+}
+.contact {
+  background: #333;
+  color: white;
+  padding: 3rem 0;
   text-align: center;
-  background: #fff;
-  border-top: 1px solid #eee3e0;
-  border-bottom: 1px solid #eee3e0;
 }
-.contact h2{ margin-bottom: .35rem; }
-.contact a{ color: var(--brand); text-decoration: none; border-bottom: 1px solid currentColor; }
-.contact a:hover{ opacity:.9; }
-
-/* FOOTER */
-.footer{
-  background: #fff;
-  color: #777;
-  font-size: .95rem;
+.contact a {
+  color: var(--brand);
+  text-decoration: none;
+}
+.footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
   padding: 1rem 0;
-  text-align: center;
-}
-
-/* make sure long lists don't feel cramped on mobile */
-@media (max-width: 560px){
-  .panel::after{
-    background-position: right -120px center;
-    background-size: 120vw auto;
-    opacity: .55;
-  }
-  ul{ margin-left: 1rem; }
 }
