@@ -1,67 +1,131 @@
 :root{
-  --accent: #ff6600;
-  --muted:#666;
+  --brand: #e53923;           /* match your red logo */
+  --ink: #1b1b1b;
+  --muted: #5a5a5a;
+  --paper: #fff7f5;           /* warm light background */
+  --panel: #ffffff;
+  --overlay: rgba(0,0,0,.35); /* readability overlay */
+  --overlay-hover: rgba(0,0,0,.22);
+  --wrap: 1100px;
 }
+
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:#fff;color:#222}
-.site-header{display:flex;align-items:center;justify-content:center;padding:18px 12px;background:#fff;border-bottom:1px solid #eee}
-.logo{
-    height: 300px;
-    display: block;
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
 }
-/* HERO */
+
+/* generic layout */
+.wrap{
+  width: min(100% - 2rem, var(--wrap));
+  margin-inline: auto;
+}
+
+/* LOGO + TAGLINE */
 .hero{
-  height:56vh;
-  background-image:url('assets/cd6-bg.jpg');
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  position: relative;
+  padding: 2.75rem 0 1rem;
+  background: var(--paper);
+  border-bottom: 1px solid #e9e3e1;
+  text-align: center;
 }
-.hero-overlay{
-  width:100%;
-  height:100%;
-  background:linear-gradient(180deg, rgba(0,0,0,0.30), rgba(0,0,0,0.45));
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.logo{
+  width: clamp(180px, 22vw, 360px);
+  height: auto;
+  display: inline-block;
 }
-.hero-inner{text-align:center;color:#fff;padding:20px}
-.hero-inner h1{font-size:44px;margin:0 0 8px 0;letter-spacing:0.3px}
-.hero-inner .tagline{font-size:18px;margin:0;opacity:0.95}
-
-/* CONTENT CARD */
-.content{padding:36px 18px 64px}
-.onepager{
-  max-width:960px;
-  margin:0 auto;
-  background:#fff;
-  padding:28px;
-  border-radius:10px;
-  box-shadow:0 8px 30px rgba(0,0,0,0.08);
-}
-.onepager h2{color:var(--accent);margin-top:0}
-.onepager h3{margin-bottom:6px;color:#333}
-.onepager p, .onepager li{color:#333;line-height:1.6}
-.onepager ul{padding-left:18px}
-
-/* Footer */
-.site-footer{text-align:center;padding:22px;font-size:14px;color:var(--muted);background:#fafafa}
-
-/* Responsive */
-@media (max-width:720px){
-  .hero{height:40vh}
-  .hero-inner h1{font-size:28px}
-  .onepager{padding:18px}
+.tagline{
+  margin: .75rem 0 0;
+  color: var(--muted);
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
 }
 
+/* PANELS WITH BACKGROUND SVG + OVERLAY */
+.panel{
+  position: relative;
+  isolation: isolate;
+  padding: clamp(2rem, 4vw, 3.5rem) 0;
+  background: var(--panel);
+  overflow: hidden;
+}
 
+/* background image (set via class) */
+.panel::after{
+  content:"";
+  position:absolute; inset:0;
+  background-repeat: no-repeat;
+  background-position: right -80px center;
+  background-size: min(900px, 80vw) auto;
+  opacity: .7;              /* let the car be visible behind text */
+  z-index:-2;
+}
 
+/* dark overlay for readability */
+.panel::before{
+  content:"";
+  position:absolute; inset:0;
+  background: var(--overlay);
+  z-index:-1;
+  transition: background .35s ease;
+}
 
+/* desktop hover lighten */
+@media (hover:hover){
+  .panel:hover::before{ background: var(--overlay-hover); }
+}
 
+/* swap the car backgrounds by section */
+.bg-cd5::after{ background-image: url("assets/cd5.svg"); }
+.bg-ls400::after{ background-image: url("assets/ls400.svg"); }
+.bg-j30::after{ background-image: url("assets/j30.svg"); }
 
+/* headings */
+h2{
+  color: var(--brand);
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  margin: 0 0 .75rem;
+}
+h3{
+  color: var(--ink);
+  font-size: clamp(1.1rem, 1.8vw, 1.25rem);
+  margin: 1.25rem 0 .4rem;
+}
 
+/* text */
+p{ margin: 0 0 1rem; }
+ul{ margin: .25rem 0 1rem 1.2rem; padding:0; }
+li{ margin: .35rem 0; }
 
+/* CONTACT */
+.contact{
+  padding: 2.25rem 0 2.75rem;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid #eee3e0;
+  border-bottom: 1px solid #eee3e0;
+}
+.contact h2{ margin-bottom: .35rem; }
+.contact a{ color: var(--brand); text-decoration: none; border-bottom: 1px solid currentColor; }
+.contact a:hover{ opacity:.9; }
 
+/* FOOTER */
+.footer{
+  background: #fff;
+  color: #777;
+  font-size: .95rem;
+  padding: 1rem 0;
+  text-align: center;
+}
 
+/* make sure long lists don't feel cramped on mobile */
+@media (max-width: 560px){
+  .panel::after{
+    background-position: right -120px center;
+    background-size: 120vw auto;
+    opacity: .55;
+  }
+  ul{ margin-left: 1rem; }
+}
