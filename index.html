@@ -1,80 +1,95 @@
-:root {
-  --brand: #e53923;
-  --overlay: rgba(0,0,0,.35);
-  --overlay-hover: rgba(0,0,0,.22);
-}
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-.wrap {
-  width: min(90%, 1100px);
-  margin: auto;
-}
-.logo {
-  width: clamp(200px, 25vw, 400px);
-  display: block;
-  margin: 0 auto 1rem;
-}
-.tagline {
-  text-align: center;
-  color: #555;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-}
-.panel {
-  position: relative;
-  padding: clamp(2rem, 5vw, 4rem) 0;
-  color: #fff;
-}
-.panel::before {
-  content: "";
-  position: absolute; inset: 0;
-  background: var(--overlay);
-  transition: background .3s ease;
-}
-.panel:hover::before {
-  background: var(--overlay-hover);
-}
-.panel::after {
-  content: "";
-  position: absolute; inset: 0;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: .6;
-  z-index: -1;
-}
-.bg-cd5::after { background-image: url("assets/cd5.webp"); }
-.bg-ls400::after { background-image: url("assets/ls400.webp"); }
-.bg-j30::after { background-image: url("assets/j30.webp"); }
-.wrap h2 {
-  color: var(--brand);
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-}
-h3 {
-  margin-top: 1.5rem;
-  margin-bottom: .5rem;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
-  color: white;
-}
-ul, p {
-  color: white;
-  margin-bottom: 1rem;
-}
-.contact {
-  background: #333;
-  color: white;
-  padding: 3rem 0;
-  text-align: center;
-}
-.contact a {
-  color: var(--brand);
-  text-decoration: none;
-}
-.footer {
-  background: #222;
-  color: #aaa;
-  text-align: center;
-  padding: 1rem 0;
-}
+<style>
+  .sidebar-visual {
+    position: fixed;
+    top: 100px;
+    width: 80px;
+    height: auto;
+    opacity: 0.08;
+    z-index: -1;
+  }
+  .sidebar-left {
+    left: 10px;
+  }
+  .sidebar-right {
+    right: 10px;
+  }
+  @media (max-width: 768px) {
+    .sidebar-visual {
+      display: none;
+    }
+  }
+</style>
+
+<img src="https://raw.githubusercontent.com/fitmentfoundry/FitmentFoundry/main/assets/side-visual-left.png" class="sidebar-visual sidebar-left" alt="Fitment Visual Left">
+<img src="https://raw.githubusercontent.com/fitmentfoundry/FitmentFoundry/main/assets/side-visual-right.png" class="sidebar-visual sidebar-right" alt="Fitment Visual Right">
+
+<div style="text-align:center; margin-bottom: 20px;">
+  <div style="display:inline-block; padding: 10px 20px; background:#000; color:#fff; font-weight:bold; border-radius:8px; font-size:24px; font-family:sans-serif;">
+    Fitment Foundry
+  </div>
+</div>
+
+**Fitment Foundry**  
+*Because Fitment Shouldn’t Be a Guessing Game*
+
+---
+
+### 🧾 About Us
+Fitment Foundry is a specialized remote team based in the Philippines offering precise, reliable, and scalable support for automotive e-commerce platforms. With deep experience in catalog management, vehicle compatibility data, and e-commerce optimization, we help teams maintain high data integrity without the overhead of a traditional agency.
+
+---
+
+### ⚙️ Services We Offer
+
+#### General Maintenance of Vehicle Compatibility & Product Data
+- Update vehicle fitment tables based on changes in the compatibility database
+- Standardize product attributes and vehicle qualifier values
+- Map outdated vehicle entries to current standard database values
+- Create optimized product titles for eCommerce platforms and marketplaces
+- Standardize and generate B2B product labels and part descriptions
+- Identify duplicate listings across private label product lines
+- Map categories to part names for eBay and Amazon
+- Align eBay and Amazon item specifics with structured product attributes
+
+#### Business Opportunity Identification
+- Conduct VIO-based gap analysis to uncover product or fitment opportunities
+- Identify kit-building possibilities across multiple product categories
+
+#### Data Analysis & Insights
+- Compare competitor listings and catalog structures
+- Analyze listing performance across sales channels
+- Investigate return rates and identify non-performing SKUs
+
+#### Add-On Services (via our trusted network)
+- Conduct market research and trend analysis for Amazon keyword strategies
+- Develop and implement targeted keyword plans for improved product discoverability
+- Monitor keyword performance using analytics tools and adjust strategies accordingly
+- Generate keyword performance reports with actionable recommendations
+- Track competitor keyword strategies and adapt for competitive advantage
+
+---
+
+### 🚀 Why Work With Us
+- Hands-on experience with ACES, PIES, TecDoc, and eCommerce marketplaces
+- Scalable and efficient remote operations
+- PH-based team trained in catalog accuracy and structured workflows
+- Affordable, reliable, and easy to collaborate with
+
+---
+
+### 🔧 Tools & Platforms
+**Catalog/Data:** ACES, PIES, TecDoc, Excel, Google Sheets  
+**eCommerce:** Amazon, eBay, Walmart, Shopify  
+**Workflow:** Slack, Trello, Google Workspace
+
+---
+
+### 📣 Let’s Work Together
+For questions, project discussions, or trial proposals:
+
+**Contact:** Fitment Foundry Team — fitmentfoundry@gmail.com  
+**Website:** https://fitmentfoundry.github.io/FitmentFoundry/
+
+---
+
+*Fitment Foundry | Because Fitment Shouldn’t Be a Guessing Game*
