@@ -1,141 +1,112 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fitment Foundry</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #222;
+      font-family: Arial, sans-serif;
+      margin: 40px;
       line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px;
-      background: white;
-      position: relative;
-    }
-    header {
+    .logo {
       text-align: center;
-      padding: 30px 10px 20px;
-      position: relative;
+      margin-bottom: 20px;
     }
-    header img {
-      max-width: 180px;
-      height: auto;
+    .logo img {
+      max-width: 300px;
     }
-    h1 {
-      font-size: 28px;
-      margin-top: 10px;
-    }
-    h2 {
-      margin-top: 40px;
-      color: #444;
-    }
-    ul {
-      padding-left: 20px;
+    h1, h2, h3 {
+      color: #B80000;
     }
     .section {
-      margin-top: 30px;
+      margin-bottom: 40px;
     }
-    .side-bar {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 80px;
-      background: url('https://www.transparenttextures.com/patterns/white-wall.png');
-      opacity: 0.05;
-    }
-    .left-bar {
-      left: -80px;
-    }
-    .right-bar {
-      right: -80px;
-    }
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
-      color: #888;
+    hr {
+      margin: 40px 0;
     }
   </style>
 </head>
 <body>
-  <div class="side-bar left-bar"></div>
-  <div class="side-bar right-bar"></div>
-  <div class="container">
-    <header>
-      <img src="https://fitmentfoundry.github.io/FitmentFoundry/logo.png" alt="Fitment Foundry Logo" />
-      <h1>Fitment Foundry</h1>
-      <p><em>Because Fitment Shouldn’t Be a Guessing Game</em></p>
-    </header>
-
-    <div class="section">
-      <h2>🧾 About Us</h2>
-      <p>Fitment Foundry is a specialized remote team based in the Philippines offering precise, reliable, and scalable support for automotive e-commerce platforms. With deep experience in catalog management, vehicle compatibility data, and e-commerce optimization, we help teams maintain high data integrity without the overhead of a traditional agency.</p>
-    </div>
-
-    <div class="section">
-      <h2>⚙️ Services We Offer</h2>
-      <ul>
-        <li><strong>General Maintenance of Vehicle Compatibility & Product Data</strong>
-          <ul>
-            <li>Update fitment tables and map outdated vehicle entries</li>
-            <li>Standardize product attributes and titles</li>
-            <li>Generate B2B labels, part descriptions, and eliminate duplicates</li>
-          </ul>
-        </li>
-        <li><strong>Business Opportunity Identification</strong>
-          <ul>
-            <li>VIO-based gap analysis and kit-building recommendations</li>
-          </ul>
-        </li>
-        <li><strong>Data Analysis & Insights</strong>
-          <ul>
-            <li>Competitor listing and catalog comparisons</li>
-            <li>Sales performance and returns investigation</li>
-          </ul>
-        </li>
-        <li><strong>Add-On Services</strong> (via our trusted network)
-          <ul>
-            <li>Amazon keyword strategy and market research</li>
-            <li>Keyword tracking, reporting, and competitive analysis</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>🚀 Why Work With Us</h2>
-      <ul>
-        <li>Experienced in ACES, PIES, TecDoc, eCommerce marketplaces</li>
-        <li>Efficient, scalable PH-based team trained in catalog accuracy</li>
-        <li>Affordable, consistent, and easy to collaborate with</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>🔧 Tools & Platforms</h2>
-      <p><strong>Catalog/Data:</strong> ACES, PIES, TecDoc, Excel, Google Sheets<br/>
-         <strong>eCommerce:</strong> Amazon, eBay, Walmart, Shopify<br/>
-         <strong>Workflow:</strong> Slack, Trello, Google Workspace</p>
-    </div>
-
-    <div class="section">
-      <h2>📣 Let’s Work Together</h2>
-      <p><strong>Fitment Foundry HQ</strong><br/>
-      📩 <a href="mailto:fitmentfoundry@gmail.com">fitmentfoundry@gmail.com</a><br/>
-      🌐 Website: You're already here!</p>
-    </div>
-
-    <footer>
-      <p>© Fitment Foundry • Because Fitment Shouldn’t Be a Guessing Game</p>
-    </footer>
+  <div class="logo">
+    <img src="logo.png" alt="Fitment Foundry Logo">
   </div>
+  <h1>Fitment Foundry</h1>
+  <p><em>Because Fitment Shouldn’t Be a Guessing Game</em></p>
+  <hr />
+
+  <div class="section">
+    <h2>🧾 About Us</h2>
+    <p>Fitment Foundry is a specialized remote team based in the Philippines offering precise, reliable, and scalable support for automotive e-commerce platforms. With deep experience in catalog management, vehicle compatibility data, and e-commerce optimization, we help teams maintain high data integrity without the overhead of a traditional agency.</p>
+  </div>
+
+  <div class="section">
+    <h2>⚙️ Services We Offer</h2>
+    <h3>General Maintenance of Vehicle Compatibility & Product Data</h3>
+    <ul>
+      <li>Update vehicle fitment tables based on changes in the compatibility database</li>
+      <li>Standardize product attributes and vehicle qualifier values</li>
+      <li>Map outdated vehicle entries to current standard database values</li>
+      <li>Create optimized product titles for eCommerce platforms and marketplaces</li>
+      <li>Standardize and generate B2B product labels and part descriptions</li>
+      <li>Identify duplicate listings across private label product lines</li>
+      <li>Map categories to part names for eBay and Amazon</li>
+      <li>Align eBay and Amazon item specifics with structured product attributes</li>
+    </ul>
+
+    <h3>Business Opportunity Identification</h3>
+    <ul>
+      <li>Conduct VIO-based gap analysis to uncover product or fitment opportunities</li>
+      <li>Identify kit-building possibilities across multiple product categories</li>
+    </ul>
+
+    <h3>Data Analysis & Insights</h3>
+    <ul>
+      <li>Compare competitor listings and catalog structures</li>
+      <li>Analyze listing performance across sales channels</li>
+      <li>Investigate return rates and identify non-performing SKUs</li>
+    </ul>
+
+    <h3>Add-On Services (via our trusted network)</h3>
+    <ul>
+      <li>Conduct market research and trend analysis for Amazon keyword strategies</li>
+      <li>Develop and implement targeted keyword plans for improved product discoverability</li>
+      <li>Monitor keyword performance using analytics tools and adjust strategies accordingly</li>
+      <li>Generate keyword performance reports with actionable recommendations</li>
+      <li>Track competitor keyword strategies and adapt for competitive advantage</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🚀 Why Work With Us</h2>
+    <ul>
+      <li>Hands-on experience with ACES, PIES, TecDoc, and eCommerce marketplaces</li>
+      <li>Scalable and efficient remote operations</li>
+      <li>PH-based team trained in catalog accuracy and structured workflows</li>
+      <li>Affordable, reliable, and easy to collaborate with</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🔧 Tools & Platforms</h2>
+    <p><strong>Catalog/Data:</strong> ACES, PIES, TecDoc, Excel, Google Sheets</p>
+    <p><strong>eCommerce:</strong> Amazon, eBay, Walmart, Shopify</p>
+    <p><strong>Workflow:</strong> Slack, Trello, Google Workspace</p>
+  </div>
+
+  <div class="section">
+    <h2>📣 Let’s Work Together</h2>
+    <p><strong>Contact:</strong> [email placeholder]</p>
+    <p><strong>Website:</strong> Coming Soon</p>
+  </div>
+
+  <hr />
+  <p style="text-align:center;">Fitment Foundry | Because Fitment Shouldn’t Be a Guessing Game</p>
 </body>
 </html>
